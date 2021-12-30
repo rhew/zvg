@@ -1,7 +1,8 @@
 package main
 
 import (
-    "github.com/rhew/zvg-go/pkg/zvg"
+    // "github.com/rhew/zvg/pkg/zvg"
+    "github.com/rhew/zvg"
 )
 
 func main() {
