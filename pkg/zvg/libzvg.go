@@ -11,14 +11,27 @@ func ZvgBanner() {
     C.zvgBanner((&C.ZvgSpeeds[0]), &C.ZvgID)
 }
 
-func ZvgFrameOpen() int {
-    return int(C.zvgFrameOpen())
+func ZvgFrameOpen() uint {
+    return uint(C.zvgFrameOpen())
 }
 
 func ZvgFrameClose() {
     C.zvgFrameClose()
 }
 
-func ZvgError(err int) {
+func ZvgError(err uint) {
     C.zvgError(C.uint(err))
+}
+
+func zvgFrameVector(xStart, yStart, xEnd, yEnd uint) uint {
+    return uint(C.zvgFrameVector(C.uint(xStart), C.uint(yStart), C.uint(xEnd), C.uint(yEnd)))
+}
+
+//   uint zvgFrameSend(void)
+func zvgFrameSend() uint {
+    return uint(C.zvgFrameSend())
+}
+
+func zvgFrameSetColor(color uint) {
+    C.zvgEncSetColor(C.uint(color))
 }
