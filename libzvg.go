@@ -23,15 +23,15 @@ func ZvgError(err uint) {
     C.zvgError(C.uint(err))
 }
 
-func zvgFrameVector(xStart, yStart, xEnd, yEnd uint) uint {
+func ZvgFrameVector(xStart, yStart, xEnd, yEnd uint) uint {
     return uint(C.zvgFrameVector(C.uint(xStart), C.uint(yStart), C.uint(xEnd), C.uint(yEnd)))
 }
 
 //   uint zvgFrameSend(void)
-func zvgFrameSend() uint {
+func ZvgFrameSend() uint {
     return uint(C.zvgFrameSend())
 }
 
-func zvgFrameSetColor(color uint) {
+func ZvgFrameSetColor(color uint) {
     C.zvgEncSetColor(C.uint(color))
 }
